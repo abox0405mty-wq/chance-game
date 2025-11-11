@@ -10,19 +10,18 @@
   <div class="container">
     <header>
       <h1>パワーリフティング チャンス！</h1>
-      <p class="subtitle">美女たちの応援でスクワットを成功させよう。制限時間: <span id="timer">60</span>s</p>
+      <p class="subtitle">美女たちの応援でスクワットを成功させよう。制限時間: <span id="timer">60</span> 秒</p>
     </header>
 
     <main>
-      <section class="status">
+      <section class="status" aria-live="polite">
         <div>現在の重量: <span id="weight">100</span> kg</div>
         <div>クリア数: <span id="cleared">0</span></div>
         <div>現在の応援: <span id="cheers">0</span></div>
       </section>
 
       <section class="stage">
-        <div class="cheerleaders" id="cheerleaders">
-          <!-- シンプルな美女アイコンを複数表示 -->
+        <div class="cheerleaders" id="cheerleaders" aria-label="応援団">
           <div class="cheer" data-index="0"></div>
           <div class="cheer" data-index="1"></div>
           <div class="cheer" data-index="2"></div>
@@ -35,20 +34,21 @@
             <div class="head"></div>
             <div class="body"></div>
           </div>
-          <div class="squat-progress">
+          <div class="squat-progress" aria-label="スクワット進行度">
             <div class="progress-bar" id="progress"></div>
           </div>
+          <p id="message" class="message" aria-live="assertive"></p>
         </div>
       </section>
 
       <section class="controls">
-        <button id="cheerBtn" class="button">チャンス！</button>
-        <button id="startBtn" class="button secondary">スタート</button>
-        <button id="resetBtn" class="button secondary">リセット</button>
+        <button id="cheerBtn" class="button" type="button">チャンス！</button>
+        <button id="startBtn" class="button secondary" type="button">スタート</button>
+        <button id="resetBtn" class="button secondary" type="button">リセット</button>
       </section>
 
       <section class="notes">
-        <p>説明: 下の「チャンス！」ボタンを押すごとに美女が「チャンス！」と応援します。たくさん応援があるほどスクワットの挙上が早くなり、重量クリアで次の重量へ進みます。60秒で何kgまで上げられるか挑戦！</p>
+        <p>説明: スタートで60秒のチャレンジが始まります。下の「チャンス！」ボタンを押すごとに美女たちが応援し、スクワットの進みが速くなります。重量を挙げきると次の重量に挑戦！ 何回クリアできるか挑戦してみましょう。</p>
       </section>
     </main>
 
