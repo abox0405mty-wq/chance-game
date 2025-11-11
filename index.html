@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>パワーリフティング チャンスゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>パワーリフティング チャンス！</h1>
+      <p class="subtitle">美女たちの応援でスクワットを成功させよう。制限時間: <span id="timer">60</span>s</p>
+    </header>
+
+    <main>
+      <section class="status">
+        <div>現在の重量: <span id="weight">100</span> kg</div>
+        <div>クリア数: <span id="cleared">0</span></div>
+        <div>現在の応援: <span id="cheers">0</span></div>
+      </section>
+
+      <section class="stage">
+        <div class="cheerleaders" id="cheerleaders">
+          <!-- シンプルな美女アイコンを複数表示 -->
+          <div class="cheer" data-index="0"></div>
+          <div class="cheer" data-index="1"></div>
+          <div class="cheer" data-index="2"></div>
+          <div class="cheer" data-index="3"></div>
+          <div class="cheer" data-index="4"></div>
+        </div>
+
+        <div class="platform">
+          <div class="lifter" id="lifter">
+            <div class="head"></div>
+            <div class="body"></div>
+          </div>
+          <div class="squat-progress">
+            <div class="progress-bar" id="progress"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="controls">
+        <button id="cheerBtn" class="button">チャンス！</button>
+        <button id="startBtn" class="button secondary">スタート</button>
+        <button id="resetBtn" class="button secondary">リセット</button>
+      </section>
+
+      <section class="notes">
+        <p>説明: 下の「チャンス！」ボタンを押すごとに美女が「チャンス！」と応援します。たくさん応援があるほどスクワットの挙上が早くなり、重量クリアで次の重量へ進みます。60秒で何kgまで上げられるか挑戦！</p>
+      </section>
+    </main>
+
+    <footer>
+      <small>Made with ❤️ — チャンス！</small>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
